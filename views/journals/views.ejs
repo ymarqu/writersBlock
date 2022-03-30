@@ -1,0 +1,10 @@
+<% layout('layouts/boilerplate') -%>
+
+<% for (let entry of journal) {%>
+    <div>
+        <h2><%=entry.title%></h2>
+        <p><%=entry.entry%></p>
+        <a href="journal/<%=entry.id%>">See More</a>
+    </div>
+
+    <%}%>

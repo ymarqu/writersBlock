@@ -1,0 +1,21 @@
+<%layout('layouts/boilerplate') -%>
+
+<div class="col-8 offset-2 mt-5">
+<form action="/journals/journal/<%=editEntry.id%>?_method=PATCH" method="post" novalidate class="needs-validation">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="input" class="form-control" id="title" name="title" placeholder="Title" value="<%=editEntry.title%>" required>
+        <div class="invalid-feedback">
+          Uh oh! Seems like you forgot something....
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="entry" name="entry" rows="20" style="resize: none;" placeholder="Jounral Entry" required><%=editEntry.entry%></textarea>
+        <div class="invalid-feedback">
+          Uh oh! Seems like you forgot something....
+        </div>
+      </div>
+      <button class="btn btn-lg btn-outline-success">Update</button>
+      <a class="btn btn-lg btn-outline-danger" href="/journals/journal">Cancel</a>
+</form>
+</div>

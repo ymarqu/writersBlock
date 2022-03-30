@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate'); -%>
+<div class="col-8 offset-2 mt-5">
+<h1><%=prompt.prompt%></h1>
+<form action="/journals" method="post" novalidate class="needs-validation">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="input" class="form-control" id="title" name="title" placeholder="Title" required>
+        <div class="invalid-feedback">
+          Uh oh! Seems like you forgot something....
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="entry" name="entry" rows="20" style="resize: none;" placeholder="Jounral Entry" required></textarea>
+        <div class="invalid-feedback">
+          Uh oh! Seems like you forgot something....
+        </div>
+      </div>
+      <button class="btn btn-lg btn-outline-success">Submit</button>
+      <a class="btn btn-lg btn-outline-danger" href="/journals">Cancel</a>
+</form>
+</div>
+

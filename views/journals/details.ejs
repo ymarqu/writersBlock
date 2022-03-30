@@ -1,0 +1,8 @@
+<%layout('layouts/boilerplate') -%>
+
+<h3><%=view.title%></h3>
+<p><%=view.entry%></p>
+<a class="btn btn-lg btn-outline-success" href="/journals/journal/<%=view.id%>/edit">Edit</a>
+<form action="/journals/journal/<%=view.id%>?_method=delete" method="post" style="display: inline-block;">
+    <button class="btn btn-lg btn-outline-danger">Delete</button>
+</form>
